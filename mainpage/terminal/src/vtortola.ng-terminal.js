@@ -1,4 +1,4 @@
-﻿angular.module('repository', [])
+﻿angular.module('vtortola.ng-terminal', [])
 
 .provider('terminalConfiguration', function () {
     
@@ -6,7 +6,7 @@
         var me = {};
         me.typeSoundUrl =null;
         me.startSoundUrl = null;
-        me.promptConfiguration = { end: ':>', user: 'anon', separator: '@', path: '\\' };
+        me.promptConfiguration = { end: ':>', user: 'User', separator: '@', path: '\\' };
                
         me.getTypeEffect = null;
         me.getStartEffect = null;
@@ -89,12 +89,12 @@
         };
 
         me.resetUser = function () {
-            _user = config && config.user ? config.user : 'anon';
+            _user = config && config.user ? config.user : 'User';
             build();
         }
 
         me.reset = function () {
-            _user = config && config.user!=null ? (config.user||'') : 'anon';
+            _user = config && config.user!=null ? (config.user||'') : 'User';
             _path = config && config.path!=null ? (config.path||'') : '\\';
             _userPathSeparator = config && config.separator!=null ? (config.separator||'') : '@';
             _promptEnd = config && config.end!=null ? (config.end||'') : ':>';

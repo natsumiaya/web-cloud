@@ -64,7 +64,7 @@ body {
     padding-top: 22px;
     background: rgba(0, 0, 0, 0) url(http://vtortola.github.io/WebSocketListener/images/github-button.png) 0 0 no-repeat;
 }
-.container {
+.console-container {
     width: 720px;
     margin: 0px auto;
     color: #FFF;
@@ -104,7 +104,17 @@ body {
     font-family:Consolas;
     margin:0 10px 10px 10px;
 }
-
+.click-me {
+    position: relative;
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    top: -60px;
+    left: 350px;
+    color: yellow;
+    text-shadow:3px 3px 4px #000;
+    visibility:visible;
+    font-size:2em;
+    pointer-events:none;
+}
 .terminal-focused .click-me {
     visibility:hidden;
 }
@@ -124,7 +134,9 @@ body {
     border:none;
 }
 
-
+a{
+    color:yellow;
+}
 
 @media only screen and (max-device-width: 480px) {
     .container {

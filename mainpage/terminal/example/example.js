@@ -1,4 +1,4 @@
-﻿angular.module('repository-body', ['repository', 'repository-body.command.tools', 'repository-body.command.implementations', 'repository-body.command.filesystem'])
+﻿angular.module('ng-terminal-example', ['vtortola.ng-terminal', 'ng-terminal-example.command.tools', 'ng-terminal-example.command.implementations', 'ng-terminal-example.command.filesystem'])
 .provider('$ga', function () {
 
     window['GoogleAnalyticsObject'] = 'ga';
@@ -36,14 +36,20 @@
     setTimeout(function () {
         $scope.$broadcast('terminal-output', {
             output: true,
-            text: ['Welcome to vtortola.GitHub.io',
-                   'This is an example of ng-terminal-emulator.',
-                   '',
-                   "Please type 'help' to open a list of commands"],
+            text: ['Welcome to Codeloud',
+                   "Type 'help' to open a list of commands"],
             breakLine: true
         });
         $scope.$apply();
     }, 100);
+
+    $scope.gitHub = function () {
+        $ga('send', 'event', 'ng-terminal-emulator', 'click', 'GitHub');
+    };
+
+    $scope.unitTests = function () {
+        $ga('send', 'event', 'ng-terminal-emulator', 'click', 'UnitTest');
+    };
 
     $scope.session = {
         commands: [],
