@@ -341,7 +341,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 2% 0;
     }
 }
 
@@ -876,4 +876,8 @@ body {
     height: 50px;
     margin-bottom: 5%;
     margin-top: 5%;
+}
+
+.register-form{
+    width: 70%;
 }
